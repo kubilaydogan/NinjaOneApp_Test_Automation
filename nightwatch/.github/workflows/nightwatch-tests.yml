@@ -1,0 +1,32 @@
+name: nightwatch-tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Enter test tag to run (optional):"
+        type: choice
+        required: false
+        options:
+          - login
+          - a11y
+    
+concurrency:
+  group: "nightwatch-tests-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  nightwatch-tests:
+    name: Run Nightwatch tests
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v3
+        
+      - name: Install dependencies
+        shell: bash
+        run: npm install
+
+      - name: Run Nightwatch tests
+        shell: bash
+        run: npx nightwatch --tag ${{ inputs.tag || 'login' }}
