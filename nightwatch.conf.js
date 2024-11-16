@@ -1,14 +1,3 @@
-// const Services = {}
-// function loadServices() {
-//   try {
-//     Services.chromedriverPath = process.env.CHROMEDRIVER_PATH || require('chromedriver').path;
-//   } catch (e) {
-//     console.error('Failed to load services:', e);
-//   }
-// }
-
-// loadServices();
-
 module.exports = {
   src_folders: ['test'],
   page_objects_path: ['nightwatch/page-objects'],
