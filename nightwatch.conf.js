@@ -45,20 +45,27 @@ module.exports = {
     chrome: {
       desiredCapabilities: {
         browserName: 'chrome',
-        'goog:chromeOptions': {
-          w3c: true,
-          args: [
-            'start-maximized',
-            '--no-sandbox',
-            '--ignore-certificate-errors',
-            'disable-gpu',
-            '--disable-dev-shm-usage',
-            '--disable-infobars',
-            'disable-browser-side-navigation',
-            '--remote-debugging-pipe'
-          ]
+        chromeOptions: {
+          binary: require('chromedriver').path,
+          args: ['--no-sandbox', '--disable-dev-shm-usage', '--headless', '--disable-gpu']
         }
-      },
+      }
+      // desiredCapabilities: {
+      //   browserName: 'chrome',
+      //   'goog:chromeOptions': {
+      //     w3c: true,
+      //     args: [
+      //       'start-maximized',
+      //       '--no-sandbox',
+      //       '--ignore-certificate-errors',
+      //       'disable-gpu',
+      //       '--disable-dev-shm-usage',
+      //       '--disable-infobars',
+      //       'disable-browser-side-navigation',
+      //       '--remote-debugging-pipe'
+      //     ]
+      //   }
+      // },
 
       webdriver: {
         start_process: true,
