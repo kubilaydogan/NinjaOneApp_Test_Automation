@@ -32,9 +32,14 @@ module.exports = {
       webdriver: {
         start_process: true,
         server_path: require('chromedriver').path,
-        port: 9515
+        // port: 9515
+        port: undefined,
+        host: 'localhost',
+        ssl: false,
+        default_path_prefix: '',
+        proxy: undefined,
+        cli_args: {}
       },
-      
     },
     
     chrome: {
