@@ -1,13 +1,13 @@
-const Services = {}
-function loadServices() {
-  try {
-    Services.chromedriverPath = process.env.CHROMEDRIVER_PATH || require('chromedriver').path;
-  } catch (e) {
-    console.error('Failed to load services:', e);
-  }
-}
+// const Services = {}
+// function loadServices() {
+//   try {
+//     Services.chromedriverPath = process.env.CHROMEDRIVER_PATH || require('chromedriver').path;
+//   } catch (e) {
+//     console.error('Failed to load services:', e);
+//   }
+// }
 
-loadServices();
+// loadServices();
 
 module.exports = {
   src_folders: ['test'],
@@ -42,7 +42,8 @@ module.exports = {
       
       webdriver: {
         start_process: true,
-        server_path: Services.chromedriverPath,
+        server_path: require('chromedriver').path,
+        port: 9515
       },
       
     },
