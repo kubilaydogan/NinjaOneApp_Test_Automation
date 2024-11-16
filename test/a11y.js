@@ -1,6 +1,6 @@
 describe('NinjaOne Login Page Accessibility Tests', function () {
 
-  this.tags = ['a11y', 'login'];
+  this.tags = ['a11y'];
 
   beforeEach(async function () {
     await browser.page.loginPage().navigate().assert.titleEquals('NinjaOne');
