@@ -1,0 +1,24 @@
+{
+  "name": "ninjaoneapp_test_automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run clean && nightwatch --headless",
+    "tag": "nightwatch --tag a11y",
+    "test:allure": "npm run clean && nightwatch && npm run openAllureReport",
+    "test:nightwatch": "npm run clean && nightwatch && npm run openNightwatchReport",
+    "openAllureReport": "allure generate ./allure-results --clean && allure open",
+    "openNightwatchReport": "open ./tests_output/nightwatch-html-report/index.html",
+    "clean": "rimraf allure-report allure-results tests_output screenshots logs"
+  },
+  "keywords": [],
+  "author": "Kubilay Dogan",
+  "license": "ISC",
+  "description": "A demo project for test automation with Nightwatch.js",
+  "devDependencies": {
+    "chromedriver": "^131.0.0",
+    "nightwatch": "^3.9.0",
+    "nightwatch-allure": "^1.2.0",
+    "rimraf": "^6.0.1"
+  }
+}

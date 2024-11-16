@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules/
+package-lock.json
+
+# idea
+.idea/
+
+#Mac
+.DS_Store
+
+# Test Output
+tests_output/
+screenshots/
+allure-report/
+allure-results/
+
+# Logs
+logs
+*.log
