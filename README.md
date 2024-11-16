@@ -12,13 +12,16 @@ The primary focus is to demonstrate tests on the login page, including verifying
 
 2. Execute the following command in your terminal to install Nightwatch globally:
 
-    > `npm install nightwatch@latest -g`
+    ```sh
+    npm install -g nightwatch@latest
+    ```
 
 3. Run `npm install` to install the project dependencies.
 
 4. Make sure Allure Commandline is installed in your machine (for Allure report).
-
-    > `npm install -g allure-commandline`
+    ```sh
+    npm install -g allure-commandline
+    ````
 
 
 ## Running Test
