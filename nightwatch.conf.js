@@ -49,7 +49,7 @@ module.exports = {
           binary: require('chromedriver').path,
           args: ['--no-sandbox', '--disable-dev-shm-usage', '--headless', '--disable-gpu']
         }
-      }
+      },
       // desiredCapabilities: {
       //   browserName: 'chrome',
       //   'goog:chromeOptions': {
