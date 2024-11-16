@@ -42,10 +42,13 @@ module.exports = {
         'goog:chromeOptions': {
           w3c: true,
           args: [
-            // '--no-sandbox',
-            // '--ignore-certificate-errors',
-            // '--allow-insecure-localhost',
-            //'--headless'
+            'start-maximized',
+            '--no-sandbox',
+            '--ignore-certificate-errors',
+            'disable-gpu',
+            '--disable-dev-shm-usage',
+            '--disable-infobars',
+            'disable-browser-side-navigation',
           ]
         }
       },
