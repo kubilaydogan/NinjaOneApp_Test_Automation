@@ -60,6 +60,7 @@ module.exports = {
             '--disable-dev-shm-usage',
             '--disable-infobars',
             'disable-browser-side-navigation',
+            '--remote-debugging-pipe'
           ]
         }
       },
