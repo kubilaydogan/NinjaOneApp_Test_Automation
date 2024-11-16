@@ -31,4 +31,4 @@ jobs:
 
       - name: Run Nightwatch tests
         shell: bash
-        run: npx nightwatch --tag login
+        run: npx nightwatch -e chrome --tag login
