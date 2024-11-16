@@ -24,6 +24,12 @@ jobs:
         shell: bash
         run: npm install
 
+      - name: Install Chrome
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
       - name: Run Nightwatch tests
         shell: bash
-        run: npx nightwatch
+        run: npx nightwatch --tag login
