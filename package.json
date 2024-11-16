@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run clean && nightwatch --headless",
-    "tag": "nightwatch --tag a11y",
+    "tag": "nightwatch --tag login",
     "test:allure": "npm run clean && nightwatch && npm run openAllureReport",
     "test:nightwatch": "npm run clean && nightwatch && npm run openNightwatchReport",
     "openAllureReport": "allure generate ./allure-results --clean && allure open",

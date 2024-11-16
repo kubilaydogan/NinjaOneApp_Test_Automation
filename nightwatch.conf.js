@@ -31,38 +31,25 @@ module.exports = {
       
       webdriver: {
         start_process: true,
-        server_path: require('chromedriver').path,
-        // port: 9515
-        port: undefined,
-        host: 'localhost',
-        ssl: false,
-        default_path_prefix: '',
-        proxy: undefined,
+        server_path: '',
         cli_args: {}
       },
     },
     
     chrome: {
-      // desiredCapabilities: {
-      //   browserName: 'chrome',
-      //   chromeOptions: {
-      //     binary: require('chromedriver').path,
-      //     args: ['--no-sandbox', '--disable-dev-shm-usage', '--headless', '--disable-gpu']
-      //   }
-      // },
       desiredCapabilities: {
         browserName: 'chrome',
         'goog:chromeOptions': {
           w3c: true,
           args: [
-            'start-maximized',
+            // 'start-maximized',
             '--no-sandbox',
             '--ignore-certificate-errors',
             'disable-gpu',
             '--disable-dev-shm-usage',
             '--disable-infobars',
-            'disable-browser-side-navigation',
-            '--remote-debugging-pipe',
+            // 'disable-browser-side-navigation',
+            // '--remote-debugging-pipe',
              '--headless'
           ]
         }
@@ -71,7 +58,6 @@ module.exports = {
       webdriver: {
         start_process: true,
         server_path: require('chromedriver').path,
-        // port: 9515
         port: undefined,
         host: 'localhost',
         ssl: false,
