@@ -10,10 +10,6 @@ describe('NinjaOne Login Feature Tests', function () {
 
   after(browser => browser.end());
 
-  it('testing', async function () {
-    console.log('test');
-  });
-
   it('should display an alert message with invalid login', async function () {
     const loginPage = browser.page.loginPage();
     loginPage
