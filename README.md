@@ -54,8 +54,8 @@ Several scripts are available for test runs.
 
 ### Allure Report
 
-<img src="images/allure-report.png" alt="Allure Report" width="600" height="400">
+<img src="images/allure-report.png" alt="Allure Report" width="700" height="475">
 
 ### Nightwatch Report
 
-<img src="images/nightwatch-html-report.png" alt="Nightwatch Report" width="600" height="400">
+<img src="images/nightwatch-html-report.png" alt="Nightwatch Report" width="700" height="475">
