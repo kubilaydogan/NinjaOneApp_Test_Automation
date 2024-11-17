@@ -34,6 +34,16 @@ describe('NinjaOne Login Feature Tests', function () {
 
     resetPasswordPage
       .assert.urlEquals('https://app.ninjarmm.com/auth/#/resetPassword')
+  });
+
+  it('should verify "Email" is the default option in the Verify Identity By dropdown', async function () {
+    const loginPage = browser.page.loginPage();
+    const resetPasswordPage = browser.page.resetPasswordPage();
+
+    loginPage
+      .click('@forgotPasswordLink');
+
+    resetPasswordPage
       .waitForElementVisible('@verifyIdentityByDropdown')
       .expect.element('@selectedOption').text.to.equal('Email');
   });
@@ -51,5 +61,5 @@ describe('NinjaOne Login Feature Tests', function () {
       .waitForElementVisible('@pageHeader')
       .expect.element('@pageHeader').text.to.equal('Registration');
   });
-  
+
 });
